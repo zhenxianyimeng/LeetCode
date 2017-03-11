@@ -1,4 +1,4 @@
-package com.leetcode.easy;
+package com.leetcode.hard;
 
 public class NimGame {
 	public static void main(String[] args) {

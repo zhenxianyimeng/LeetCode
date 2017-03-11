@@ -1,4 +1,4 @@
-package com.leetcode.easy;
+package com.leetcode.medium;
 
 public class MaxConsecutiveOnes {
 	public static void main(String[] args) {

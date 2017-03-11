@@ -1,4 +1,4 @@
-package com.leetcode.easy;
+package com.leetcode.medium;
 
 public class NumberComplement {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.leetcode.easy;
+package com.leetcode.medium;
 
 public class IslandPerimeter {
 	public static void main(String[] args) {

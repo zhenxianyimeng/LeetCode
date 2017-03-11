@@ -1,4 +1,4 @@
-package com.leetcode.easy;
+package com.leetcode.hard;
 
 import java.util.Scanner;
 
