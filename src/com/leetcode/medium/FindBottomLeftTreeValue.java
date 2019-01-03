@@ -1,5 +1,7 @@
 package com.leetcode.medium;
 
+import com.leetcode.utils.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 
@@ -36,13 +38,12 @@ public class FindBottomLeftTreeValue {
 	}
 
 }
-
-class TreeNode {
-	int val;
-	TreeNode left;
-	TreeNode right;
-
-	TreeNode(int x) {
-		val = x;
-	}
-}
+//class TreeNode {
+//	int val;
+//	TreeNode left;
+//	TreeNode right;
+//
+//	TreeNode(int x) {
+//		val = x;
+//	}
+//}

@@ -1,7 +1,8 @@
 package com.leetcode.easy;
 
 import com.leetcode.utils.BinaryTreeUtils;
-import com.leetcode.utils.BinaryTreeUtils.TreeNode;
+//import com.leetcode.utils.BinaryTreeUtils.TreeNode;
+import com.leetcode.utils.TreeNode;
 
 /**
  * @author zjb

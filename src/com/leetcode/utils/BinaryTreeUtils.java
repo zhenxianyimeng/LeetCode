@@ -11,12 +11,7 @@ import java.util.LinkedList;
  */
 public class BinaryTreeUtils {
 
-    public static class TreeNode {
-        public int val;
-        public TreeNode left;
-        public TreeNode right;
-        public TreeNode(int x) { val = x; }
-    }
+
 
     public static void printTreeNode(TreeNode treeNode){
         if(treeNode == null){
