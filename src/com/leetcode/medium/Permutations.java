@@ -14,32 +14,32 @@ import java.util.stream.Collectors;
  */
 public class Permutations {
     public static void main(String[] args) {
-        int[] arrs = {1,2,3};
-        List<List<Integer>> results = new Permutations().permute(arrs);
-        for (List<Integer> tempList : results){
+        char[] arrs = {'a','b','c'};
+        List<List<Character>> results = new Permutations().permute(arrs);
+        for (List<Character> tempList : results){
             System.out.println(String.join(",",
                     tempList.stream().map(s->String.valueOf(s)).collect(Collectors.toList())));
         }
     }
 
-    public List<List<Integer>> permute(int[] nums) {
-        List<List<Integer>> lists = new LinkedList<>();
+    public List<List<Character>> permute(char[] nums) {
+        List<List<Character>> lists = new LinkedList<>();
         tempPermute(nums, 0, lists);
         return lists;
     }
 
-    public void tempPermute(int[] nums, int start, List<List<Integer>> lists){
+    public void tempPermute(char[] nums, int start, List<List<Character>> lists){
         int len = nums.length;
         if(start == len-1){
-            List<Integer> l = new LinkedList<>();
-            for(int num : nums){
+            List<Character> l = new LinkedList<>();
+            for(char num : nums){
                 l.add(num);
             }
             lists.add(l);
             return;
         }
         for(int i=start; i<len; i++){
-            int temp = nums[start];
+            char temp = nums[start];
             nums[start] = nums[i];
             nums[i] = temp;
             tempPermute(nums, start+1, lists);
