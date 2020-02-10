@@ -1,0 +1,27 @@
+package com.leetcode.weekly.contest175;
+
+/**
+ * Description:
+ *
+ * @author: chixiao
+ * @date: 2020-02-09
+ * @time: 11:01
+ */
+public class T5332 {
+
+    public boolean checkIfExist(int[] arr) {
+        for (int i = 0; i <arr.length -1 ; i++) {
+            for (int j = i+1; j <arr.length ; j++) {
+                if(arr[i] == 2 * arr[j] || arr[i] * 2 == arr[j]){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {10,2,5,3};
+        System.out.println(new T5332().checkIfExist(arr));
+    }
+}
