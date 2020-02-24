@@ -12,7 +12,16 @@ import java.util.List;
 public class FindAllAnagramsInAString {
 
     public List<Integer> findAnagrams(String s, String p) {
+        char[] chars1 = p.toCharArray();
+        int[] needs = new int[26];
+        for (char ch : chars1){
+            needs[ch - 'A'] ++;
+        }
+        int left=0, right=0;
+        char[] chars = s.toCharArray();
+        while (right < chars.length){
 
+        }
         return null;
     }
 
