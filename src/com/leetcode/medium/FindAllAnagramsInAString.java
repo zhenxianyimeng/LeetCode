@@ -1,5 +1,6 @@
 package com.leetcode.medium;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -12,17 +13,48 @@ import java.util.List;
 public class FindAllAnagramsInAString {
 
     public List<Integer> findAnagrams(String s, String p) {
+        List<Integer> list = new ArrayList<>();
         char[] chars1 = p.toCharArray();
         int[] needs = new int[26];
+        int[] windows = new int[26];
         for (char ch : chars1){
-            needs[ch - 'A'] ++;
+            needs[ch - 'a'] ++;
         }
         int left=0, right=0;
+        int match = 0;
         char[] chars = s.toCharArray();
-        while (right < chars.length){
-
+        int needLength = 0;
+        for (int need : needs) {
+            if(need > 0){
+                needLength++;
+            }
         }
-        return null;
+        while (right < chars.length){
+            char ch = chars[right];
+            int index = ch - 'a';
+            if(needs[index] > 0){
+                windows[index] ++;
+                if(windows[index] == needs[index]){
+                    match ++;
+                }
+            }
+            right ++;
+            while (match == needLength){
+                if(right - left == chars1.length) {
+                    list.add(left);
+                }
+                ch = chars[left];
+                index = ch - 'a';
+                if(needs[index] > 0){
+                    windows[index] -- ;
+                    if(windows[index] < needs[index]){
+                        match --;
+                    }
+                }
+                left ++;
+            }
+        }
+        return list;
     }
 
     public static void main(String[] args) {
