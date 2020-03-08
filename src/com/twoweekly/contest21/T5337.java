@@ -23,7 +23,7 @@ public class T5337 {
         int left = 0;
         int right = s.length() - 1;
         while (true){
-            
+
         }
 
     }
