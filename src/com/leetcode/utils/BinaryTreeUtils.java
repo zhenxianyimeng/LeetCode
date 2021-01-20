@@ -21,14 +21,18 @@ public class BinaryTreeUtils {
         LinkedList<TreeNode> queue = new LinkedList<>();
         queue.add(treeNode);
         while (!queue.isEmpty()){
-            TreeNode t = queue.pollFirst();
-            System.out.println(t.val);
-            if(t.left != null){
-                queue.addLast(t.left);
+            int size = queue.size();
+            for (int i = 0; i <size ; i++) {
+                TreeNode t = queue.pollFirst();
+                System.out.println(t.val);
+                if(t.left != null){
+                    queue.addLast(t.left);
+                }
+                if(t.right != null){
+                    queue.addLast(t.right);
+                }
             }
-            if(t.right != null){
-                queue.addLast(t.right);
-            }
+            System.out.println("-------");
         }
     }
 }
